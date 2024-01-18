@@ -51,17 +51,8 @@ function updateTownshipCodes() {
       }
   });
 }
-$("#nrcNumber").charReplacer({ 
-	replaceChar: ['၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '9', '၀'],
-	replaceWith: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'] 
-});
-$("#nrcNumber").keypress(function (e) {
-    //if the letter is not digit then display error and don't type anything
-   var number_arr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-   if (!number_arr.includes(e.key)) {
-       return false;
-   }
-});
+
+
 function limitNumberLength(element, maxLength) {
     if (element.value.length > maxLength) {
         element.value = element.value.slice(0, maxLength);

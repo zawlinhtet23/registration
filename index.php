@@ -59,7 +59,7 @@
                             </select>
                         </div>
                         <div class="col-sm-2">
-                            <input type="number" id="nrcNumber" name="nrc_number" class="form-control"   oninput="limitNumberLength(this, 6); ">
+                            <input type="text" id="nrcNumber" name="nrc_number" class="form-control"   oninput="limitNumberLength(this, 6);" onkeypress="return validateNumberInput(event)">
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -72,7 +72,8 @@
                     <div class="row mb-3">
                         <label for="pa_number" class="col-sm-2 col-form-label">PA Number or ACCA</label>
                         <div class="col-sm-4">
-                            <input type="number" class="form-control" id="pa_number" name="pa_number">
+                            <input type="text" class="form-control" id="pa_number" name="pa_number"
+                            onkeypress="return validatePaNumberInput(event)">
                         </div>
                     </div>
                     <div class="row mb-3">
